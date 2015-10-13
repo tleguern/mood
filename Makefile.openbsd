@@ -1,0 +1,10 @@
+PROG= mood
+SRCS= main.c config.c mood.c
+
+LDADD= -L/usr/local/lib -lstrophe -lssl -lexpat -lutil -lpthread
+COPTS= -I/usr/local/include
+
+NOMAN= no
+WARNINGS= yes
+
+. include <bsd.prog.mk>

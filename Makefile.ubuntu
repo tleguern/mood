@@ -1,0 +1,13 @@
+#
+# Makefile for Ubuntu using NetBSD's make, pmake.
+#
+PROG= mood
+SRCS= main.c config.c mood.c
+
+LDADD= -lstrophe -lssl -lexpat -lresolv -lbsd
+COPTS= -Wno-unused-parameter -Wno-unused -DHAVE_LIBBSD
+
+WARNS= 1
+NOGCCERROR= yes
+
+.include <bsd.prog.mk>
